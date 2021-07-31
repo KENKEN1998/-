@@ -1,0 +1,186 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(209, 127, 3);
+}
+
+.id{
+    transform: translateY(-20%);
+}
+.header{
+    height: 120px;
+    margin-right: 60px;
+}
+
+.header__navbar{
+    /* kéo header ra cả phần đầu html */
+    display: flex;
+    /* tạo khoảng giữa 2 thẻ */
+    justify-content: space-between;
+}
+.header__navbar-list{
+    /* bỏ dấu tròn trước thẻ li */
+    list-style: none;
+   
+    padding-left: 0;
+}
+
+.header__navbar-item{
+    margin: 0 10px;  
+}
+/* Cách viết gộp nhìu class */
+.header__navbar-item,
+.header__navbar-item-link{
+    display: inline-block;
+    font-size: 1.4rem;
+    /* gọi biến setup màu đã đặt trong base */
+    color: var(--white-color);
+    /* xóa dấu gạch chân phía dưới link */
+    text-decoration: none;
+    /* chỉnh độ dày cho chữ */
+    font-weight: 300;
+}
+
+.header__navbar-item--bold{
+    font-weight: 500;
+}
+/* khi trỏ chuột vào sẽ làm mờ phông chữ */
+
+.header__navbar-item:hover{
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* tạo dấu gạch phân cách bằng css */
+.header__navbar-item--separate::after{
+    content: "";
+    display: block;
+    
+    /* tạo ra gạch */
+    border-left: 1px solid #dadada;
+    height: 16px;
+    right: -99px;
+    top: 90%;
+    transform: translateY(-100%);
+}
+
+/* CONTAIN */
+
+.container{
+    margin-top: 30px;
+}
+.container__bground{
+    text-align: center;
+    width: 100%;
+    height: 380px;
+    background-image: linear-gradient(0, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url(/assets/img/yellow\ background.jpg);
+    background-size: 100% 380px;
+    background-repeat: no-repeat;   
+}
+
+.container__bground-text{
+    display: inline-block;
+    position: relative;
+    top: 200px; 
+    color: rgb(236, 240, 8);
+    font-size: large;  
+}
+
+
+/* TEXT SUBSTANCE */
+
+
+.basic-1 {
+      
+	padding-top: 6.5rem;
+    padding-bottom: 3rem;
+
+}
+
+.basic-1 .text-container {  
+    margin: 0 69px 69px 69px;
+    flex: 3;
+}
+
+.basic-1 .section-title {
+    margin-bottom: 3.5rem;
+}
+
+.basic-1 h2 {  
+	margin-bottom: 1.375rem;
+}
+
+.basic-1 .testimonial-author {
+	color: #484a46;
+}
+
+/* Hover Animation */
+.basic-1 .image-container {
+    margin: 69px 69px 0 0;
+    overflow: hidden;
+    border-radius: 0.25rem;
+    flex: 1;
+}
+
+.basic-1 .image-container img {
+    width: 269px;
+    margin: 0;
+	border-radius: 0.25rem;
+	transition: all 0.3s;
+}
+
+.basic-1 .image-container:hover img {
+	
+	transform: scale(1.15);
+} 
+.row{
+    display: flex;
+    justify-content: space-around;
+}
+
+/***************************/
+/*     06. Description     */
+/***************************/
+.cards-1 {
+	padding-top: 3rem;
+	padding-bottom: 2.875rem;
+}
+
+.cards-1 .card {
+	margin-bottom: 2.5rem;
+	border: none;
+	text-align: center;
+}
+
+.cards-1 .fa-stack {
+	width: 6rem;
+	height: 6rem;
+	margin-right: auto;
+	margin-bottom: 1rem;
+	margin-left: auto;
+	line-height: 6rem;
+	text-align: left;
+}
+
+.cards-1 .fa-stack .hexagon {
+	position: absolute;
+	width: 6rem;
+	height: 6rem;
+	background: url('../images/hexagon-green.svg') center center no-repeat;
+	background-size: 6rem 6rem;
+}
+
+.cards-1 .fa-stack-1x {
+	color: #fff;
+	font-size: 2rem;
+}
+
+.cards-1 .card-body {
+	padding: 0;
+}
+
+.cards-1 .card-title {
+	margin-bottom: 0.625rem;
+}
